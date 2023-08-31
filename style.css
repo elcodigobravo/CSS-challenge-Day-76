@@ -1,0 +1,74 @@
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background: #34495e;
+
+    display: grid;
+    place-items: center;
+}
+
+.hiddenKey{
+    width: 220px;
+    height: 50px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.299) ;
+    perspective: 250px;
+}
+
+.inputWrapper{
+    position: absolute;
+    z-index: 2;
+    transform-style: preserve-3d;
+    transform-origin: 50% 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.hiddenKey .inputWrapper:valid{
+    transform: rotateX(180deg);
+}
+
+.input{
+    box-sizing: border-box;
+    border: none;
+    background-color: white;
+    width: 220px;
+    height: 50px;
+    line-height: 20px;
+    padding: 15px 0;
+    font-size: 16px;
+    color: #34495e;
+    z-index: 2;
+    outline: none;
+    text-align: center;
+}
+
+.backSide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-weight: 700;
+    color: #34495e;
+    text-align: center;
+    line-height: 50px;
+    background:white ;
+    backface-visibility: hidden;
+    transform: rotateX(-180deg);
+}
+
+.keyWrapper{
+    width: 220px;
+    height: 50px;
+    background: #64c760;
+    color: white;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+}
